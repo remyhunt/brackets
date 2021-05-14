@@ -11,18 +11,13 @@ const contentfulConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: "Brackets",
   },
+  pathPrefix: "/",
   plugins: [
     {
       resolve: "gatsby-source-contentful",
-      options: {
-        // resolve: "gatsby-source-contentful",
-        // options: contentfulConfig,
-        spaceId: 'd16x4xqejal2',
-        accessToken: '3UnShcIxz9RJ7Ie_2ZNqnal5P-wXQa4SAA9ZgwcCs_M',
-        
-      },
+      options: contentfulConfig,
     },
   ],
 };
