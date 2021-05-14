@@ -3,18 +3,21 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 // import Layout from '../components/layout'
 import Navigation from '../components/nav'
+import Hero from '../components/hero'
 import Layout from '../components/layout'
 
 
 class RootIndex extends React.Component {
   render() {
     const nav = get(this, 'props.data.allContentfulHeaderLinks.edges')
+    const [hero] = get(this, 'props.data.allContentfulHero.edges')
 
     return(
       // <Layout location={this.props.location}/>
    
       <Layout location={this.props.location}>
-            <Navigation data={ nav }/>    
+          <Navigation data={ nav }/>    
+          <Hero data={ hero.node }/>
       </Layout>
     )
   }
@@ -36,6 +39,15 @@ query rootQuery {
       }
     }
   }
+  allContentfulHero {
+	  edges {
+	    node {
+        title
+        subtitleTop
+        subtitleBottom
+	    }
+	  }
+	}
   allContentfulPage(
       filter: { identifier: { eq: "Homepage" } }
     ){

@@ -1,8 +1,6 @@
 import React from 'react'
-import get from 'lodash/get'
 
 import Container from './container'
-import Navigation from './nav'
 
 class Template extends React.Component {
   render() {
