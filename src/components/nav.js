@@ -5,8 +5,8 @@ export default ( { data }) => (
     <ul className="pages-list">
           {data.map(({ node }) => { 
             return (
-              <li key={node.slug}>
-                {node.identifier}
+              <li key={node.pageTitle}>
+                {node.pageTitle}
               </li>
             )
           })}

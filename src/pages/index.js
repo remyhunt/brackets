@@ -3,19 +3,19 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 // import Layout from '../components/layout'
 import Navigation from '../components/nav'
+import Layout from '../components/layout'
 
 
 class RootIndex extends React.Component {
   render() {
-    const pages = get(this, 'props.data.allContentfulPage.edges')
+    const nav = get(this, 'props.data.allContentfulHeaderLinks.edges')
 
     return(
       // <Layout location={this.props.location}/>
-      // <Navigation data={pages}/>    
-     
-      <div className="wrapper"> 
-        <Navigation data={pages} />
-    </div>
+   
+      <Layout location={this.props.location}>
+            <Navigation data={ nav }/>    
+      </Layout>
     )
   }
 }
@@ -28,6 +28,14 @@ class RootIndex extends React.Component {
 // }
 export const rootQuery = graphql`
 query rootQuery {
+  allContentfulHeaderLinks {
+    edges {
+      node {
+        pageTitle
+        pageSlug
+      }
+    }
+  }
   allContentfulPage(
       filter: { identifier: { eq: "Homepage" } }
     ){
@@ -55,6 +63,10 @@ query rootQuery {
               url
             }
           }
+        }
+        navigation {
+          pageTitle
+          pageSlug
         }
       }
     }
