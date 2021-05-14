@@ -11,7 +11,7 @@ class RootIndex extends React.Component {
 
     return(
       // <Layout location={this.props.location}/>
-      // <Navigation data={pages}/>
+      // <Navigation data={pages}/>    
      
       <div className="wrapper"> 
         <Navigation data={pages} />
@@ -27,8 +27,10 @@ class RootIndex extends React.Component {
 //   )
 // }
 export const rootQuery = graphql`
- query rootQuery {
-  allContentfulPage {
+query rootQuery {
+  allContentfulPage(
+      filter: { identifier: { eq: "Homepage" } }
+    ){
     edges {
       node {
         identifier
@@ -36,6 +38,7 @@ export const rootQuery = graphql`
           identifier
           pageTitle
           pageDescription
+          slug
         }
         hero {
           identifier
@@ -57,6 +60,7 @@ export const rootQuery = graphql`
     }
   }
 }
+
 
 `
 export default RootIndex
