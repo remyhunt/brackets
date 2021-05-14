@@ -4,13 +4,15 @@ import { graphql } from 'gatsby'
 // import Layout from '../components/layout'
 import Navigation from '../components/nav'
 import Hero from '../components/hero'
-import Layout from '../components/layout'
+import HeroCard from '../components/hero-card'
+import Layout from '../templates/layout'
 
 
 class RootIndex extends React.Component {
   render() {
     const nav = get(this, 'props.data.allContentfulHeaderLinks.edges')
     const [hero] = get(this, 'props.data.allContentfulHero.edges')
+    const cards = get(this, 'props.data.allContentfulHeroCard.edges')
 
     return(
       // <Layout location={this.props.location}/>
@@ -18,6 +20,15 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
           <Navigation data={ nav }/>    
           <Hero data={ hero.node }/>
+          <div>
+              {cards.map(({ node }) => {
+                return (
+                  <div key={node.slug}>
+                    <HeroCard data={node} />
+                  </div>
+                )
+              })}
+          </div>
       </Layout>
     )
   }
@@ -48,41 +59,23 @@ query rootQuery {
 	    }
 	  }
 	}
-  allContentfulPage(
-      filter: { identifier: { eq: "Homepage" } }
-    ){
-    edges {
-      node {
-        identifier
-        pageMetadata {
-          identifier
-          pageTitle
-          pageDescription
-          slug
-        }
-        hero {
-          identifier
-          title
-          subtitleTop
-          subtitleBottom
-        }
-        heroCards {
-          identifier
-          heroCardTitle
-          heroCardDescription
-          heroCardImage {
-            file {
-              url
-            }
+  allContentfulHeroCard {
+	  edges {
+	    node {
+	      heroCardTitle
+        heroCardLinkUrl
+        heroCardDescription
+        heroCardImage {
+          file {
+            url
+            fileName
+            contentType
           }
         }
-        navigation {
-          pageTitle
-          pageSlug
-        }
-      }
-    }
-  }
+	    }
+	  }
+	}
+  
 }
 
 

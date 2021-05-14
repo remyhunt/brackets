@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Container from './container'
+import Container from '../components/container'
 
 class Template extends React.Component {
   render() {
     const { children } = this.props
 
     return (
-        <Container>            
+        <Container>     
+                 
             {children}
         </Container>
     )
