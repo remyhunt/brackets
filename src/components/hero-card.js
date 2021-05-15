@@ -1,16 +1,22 @@
 import React from 'react'
-// import Img from 'gatsby-image'
 
-export default ( { data }) => (
-  <div>
-    {/* <Img
-    //   className={styles.heroImage}
-        fluid={data.heroImage.fluid}
-    /> */}  
-    <h4> {data.heroCardTitle} </h4>    
-    <p> {data.heroCardDescription}</p>
-    <a href={data.heroCardLinkUrl}> Learn more &rarr; </a>
-    <img alt={data.heroCardDescription} src={data.heroCardImage.file.url}></img>    
-    {/* <p> {data.node} </p> */}
-  </div>
-)
+class HeroCard extends React.Component {
+  
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+        <div>
+            <h4> {this.props.data.heroCardTitle} </h4>    
+            <p> {this.props.data.heroCardDescription}</p>
+            <a href={this.props.heroCardLinkUrl}> Learn more &rarr; </a>
+            <img alt={this.props.data.heroCardDescription} 
+                 src={this.props.data.heroCardImage.file.url}
+            />    
+        </div>
+    )
+  }
+}
+export default HeroCard

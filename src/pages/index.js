@@ -1,16 +1,15 @@
 import * as React from 'react'
-import ReactDOM from 'react-dom';
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
-import Navigation from '../components/nav'
+import Navigation from '../components/navigation'
 import Hero from '../components/hero'
 import HeroCard from '../components/hero-card'
 import Layout from '../templates/layout'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class RootIndex extends React.Component {
   render() {
