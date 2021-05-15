@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import './navigation.module.css';
-
 
 
 class Navigation extends React.Component {
@@ -16,15 +14,18 @@ class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <Row className = 'nav'>
-          <Col md={8}>
-          Logo Here
-          </Col>
+        <Row className = 'navigation'>
           <Col md={4}>
-          <ul className="pages-list">
+              <div className = "logo">
+                Logo Here
+
+              </div>
+          </Col>
+          <Col md={8}>
+          <ul>
                 {this.props.data.map(({ node }) => { 
                   return (
-                    <li key={node.pageTitle}>
+                    <li className="navigationLinks" key={node.pageTitle}>
                       {node.pageTitle}
                     </li>
                   )

@@ -1,0 +1,64 @@
+body {
+    background-size:cover;
+    min-height:100vh;   
+    color:white;
+    /* filter: grayscale(100%); */
+    background-image: url('../images/hero-background@2x.png');
+}
+
+.Container {
+    width: 1700px;
+}
+
+.heroCard {
+    background-color:white;
+    /* color:black; */
+    text-align:left;
+    /* display:inline */
+    padding:20px;
+    margin:20px;
+
+}
+.heroCardImage {
+    top:50px;
+    /* right:400px; */
+    overflow:hidden;
+    width:20vw;
+    top:-15vh;
+    position:absolute;
+}
+.heroCard p, h4, a{
+    color:black;
+}
+.heroCard a {
+    color: #F65928;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.heroCardRow {
+    margin-top:100px;
+}
+
+.navigation .logo {
+    padding:20px;
+}
+.navigation ul {
+    list-style-type:none;
+    float:right;
+    text-decoration:none;
+    display:flex;
+    flex-direction:initial;
+    margin-top:30px;
+    display:horizontal;
+    text-align:center;
+}
+.navigation .navigationLinks {  
+    margin-top:5px;
+}
+
+.navigation li {
+    display: inline;
+
+    padding-left:30px;
+}

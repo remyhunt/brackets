@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/base.css';
 
 class RootIndex extends React.Component {
   render() {
@@ -18,12 +19,13 @@ class RootIndex extends React.Component {
     const cards = get(this, 'props.data.allContentfulHeroCard.edges')
 
     return(
-  
-      <Layout location={this.props.location}>
+
+      <Layout location={this.props.location} >
           <Navigation data={ nav }/>    
-          <Hero data={ hero.node }/>
-          <Container fluid>
-          <Row >
+          <Row className="heroCardRow">
+            <Hero className="hero" data={ hero.node }/>
+          </Row>
+          <Row className="heroCardRow">
               {cards.map(({ node }) => {
                 return (
                   <Col xs={12} lg={4}>
@@ -33,7 +35,7 @@ class RootIndex extends React.Component {
                   </Col>
                 )
               })}
-          </Row></Container>
+          </Row>
       </Layout>
     )
   }
