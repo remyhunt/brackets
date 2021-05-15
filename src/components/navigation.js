@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Logo from '../images/brackets-logo.svg';
 
 
 class Navigation extends React.Component {
@@ -17,8 +17,7 @@ class Navigation extends React.Component {
         <Row className = 'navigation'>
           <Col md={4}>
               <div className = "logo">
-                Logo Here
-
+                <img alt={'hello'} src={Logo}/>
               </div>
           </Col>
           <Col md={8}>

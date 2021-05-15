@@ -21,7 +21,7 @@ class RootIndex extends React.Component {
     return(
 
       <Layout location={this.props.location} >
-          <Navigation data={ nav }/>    
+          <Navigation data={ nav }/>
           <Row className="heroCardRow">
             <Hero className="hero" data={ hero.node }/>
           </Row>

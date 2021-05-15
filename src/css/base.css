@@ -5,7 +5,16 @@ body {
     /* filter: grayscale(100%); */
     background-image: url('../images/hero-background@2x.png');
 }
-
+.backgroundImage {
+    width:100%;
+    height: 100%;
+    /* margin: 0px; */
+    position:absolute;
+    padding:0px;
+    min-height:100vh;
+    background-size:cover;
+    background: radial-gradient(transparent, rgba(0,0,0,.9) 90%);
+}
 .Container {
     width: 1700px;
 }
@@ -40,6 +49,9 @@ body {
     margin-top:100px;
 }
 
+.navigation {
+    
+}
 .navigation .logo {
     padding:20px;
 }
@@ -59,6 +71,5 @@ body {
 
 .navigation li {
     display: inline;
-
     padding-left:30px;
 }

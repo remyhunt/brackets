@@ -9,10 +9,17 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
-        <Container>
-               
-            {children}
-        </Container>
+        <div> 
+          <div className="backgroundImage">
+        
+          </div>
+          <Container>
+            
+              {children}
+          </Container>
+
+        </div>
+       
     )
   }
 }
