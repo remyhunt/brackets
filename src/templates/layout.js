@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Container from 'react-bootstrap/Container';
 import { graphql } from 'gatsby'
 
-import Container from '../components/container'
+// import Container from '../components/container'
 
 class Template extends React.Component {
   render() {

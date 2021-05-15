@@ -6,6 +6,10 @@ import Navigation from '../components/nav'
 import Hero from '../components/hero'
 import HeroCard from '../components/hero-card'
 import Layout from '../templates/layout'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 class RootIndex extends React.Component {
@@ -20,15 +24,18 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
           <Navigation data={ nav }/>    
           <Hero data={ hero.node }/>
-          <div>
+          <Container fluid>
+          <Row >
               {cards.map(({ node }) => {
                 return (
+                  <Col xs={12} lg={4}>
                   <div key={node.slug}>
                     <HeroCard data={node} />
                   </div>
+                  </Col>
                 )
               })}
-          </div>
+          </Row></Container>
       </Layout>
     )
   }
