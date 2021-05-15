@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 // import Img from 'gatsby-image'
 import Button from 'react-bootstrap/Button';
 
