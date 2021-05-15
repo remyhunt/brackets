@@ -16,11 +16,14 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "css-loader": "^5.2.4",
     "gatsby": "^3.4.1",
     "gatsby-image": "^3.5.0",
     "gatsby-source-contentful": "^5.5.0",
+    "node-sass": "^6.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.0",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "style-loader": "^2.0.0"
   }
 }

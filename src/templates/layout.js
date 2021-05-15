@@ -1,6 +1,8 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import { graphql } from 'gatsby'
+import styles from './layout.module.css'
+
 
 // import Container from '../components/container'
 
@@ -9,8 +11,9 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
-        <Container>     
-                 
+        <Container>
+                <div className={styles.container}>
+                  </div>
             {children}
         </Container>
     )

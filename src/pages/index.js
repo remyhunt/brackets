@@ -1,7 +1,7 @@
 import * as React from 'react'
+import ReactDOM from 'react-dom';
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
-// import Layout from '../components/layout'
 import Navigation from '../components/nav'
 import Hero from '../components/hero'
 import HeroCard from '../components/hero-card'
@@ -19,8 +19,7 @@ class RootIndex extends React.Component {
     const cards = get(this, 'props.data.allContentfulHeroCard.edges')
 
     return(
-      // <Layout location={this.props.location}/>
-   
+  
       <Layout location={this.props.location}>
           <Navigation data={ nav }/>    
           <Hero data={ hero.node }/>
@@ -84,7 +83,6 @@ query rootQuery {
 	}
   
 }
-
-
 `
+
 export default RootIndex
