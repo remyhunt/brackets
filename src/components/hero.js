@@ -17,8 +17,8 @@ class Hero extends React.Component {
                 <h5 style={h5}> {this.props.data.subtitleTop} </h5>
                 <h1> {this.props.data.title}</h1>
                 <p> {this.props.data.subtitleBottom} </p>
-                <Button href="#">Get Started &gt;</Button>
-                <Button href="#" disabled>Request a Demo &gt;</Button>
+                <Button variant="primary" href="#">Get started &gt;</Button>
+                <Button variant="secondary" href="#">Request a demo &gt;</Button>
             </Col>
         )
     }
