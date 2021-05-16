@@ -28,7 +28,7 @@ class RootIndex extends React.Component {
           <Row className="heroCardRow">
               {cards.map(({ node }) => {
                 return (
-                  <Col xs={12} lg={4}>
+                  <Col xs={12} md={12} lg={4} xl={4}>
                   <div key={node.slug}>
                     <HeroCard data={node} />
                   </div>
@@ -49,7 +49,7 @@ class RootIndex extends React.Component {
 // }
 export const rootQuery = graphql`
 query rootQuery {
-  allContentfulHeaderLinks {
+  allContentfulHeaderLinks(sort: {fields: contentful_id, order: DESC}) {
     edges {
       node {
         pageTitle

@@ -10,9 +10,7 @@ class Template extends React.Component {
 
     return (
         <div> 
-          <div className="backgroundImage">
-        
-          </div>
+          <div className="backgroundImage"/>
           <Container>
             
               {children}

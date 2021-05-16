@@ -1,49 +1,76 @@
 body {
     background-size:cover;
-    min-height:100vh;   
+    background-position:center;
+    min-height:100vh; 
     color:white;
-    /* filter: grayscale(100%); */
     background-image: url('../images/hero-background@2x.png');
     font-family:"Inter", sans-serif;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h4, h5{
+    font-weight:bold;      
+}
+h1 {
+    font-size:47px;
+    letter-spacing:.01em;
+}
+h4 {
+    font-size:20px;
+}
+h5 {
+    font-size:18px;
+}
+p {
     font-weight:normal;
+    font-size:12px;
 }
 .backgroundImage {
     width:100%;
-    height: 100%;
-    /* margin: 0px; */
-    position:absolute;
-    padding:0px;
-    min-height:100vh;
+    /* height: -webkit-fill-available; */
     background-size:cover;
+    height:100vh;
+    position:absolute;
+    overflow-y:hidden;
+    padding:0px;
     background: radial-gradient(transparent, rgba(0,0,0,.9) 90%);
 }
 .Container {
     width: 1700px;
 }
-.hero h1 {
-    font-weight:800;
-}
-.heroCard {
+
+.heroCardWrapper {
     background-color:white;
     /* color:black; */
     text-align:left;
     /* display:inline */
-    padding:20px;
-    margin:20px;
-
+    /* padding:20px; */
+    /* width:370px; */
+    height:240px;
+    border-radius:4px;
+}
+.heroCard {
+    padding:40px;
+    padding-top:90px;
 }
 .heroCardImage {
-    top:50px;
-    /* right:400px; */
+    right:-40px;
     overflow:hidden;
-    width:20vw;
-    top:-15vh;
+    width:220px;
+    top:-85px;
+    /* left:18px; */
     position:absolute;
 }
+.heroCard h4 {
+}
 .heroCard p, h4, a{
+    padding-top:10px;
     color:black;
 }
 .heroCard a {
+    padding-top:20px;
+
     color: #F65928;
     text-decoration: none;
     font-weight: bold;
@@ -53,16 +80,15 @@ body {
     margin-top:100px;
 }
 
-.navigation {
-    
-}
-
 .btn {
-    font-weight: 400;
+    font-weight: medium;
+    font-size: 12px;
+    padding:8px 18px 8px 18px;
 }
 .btn-primary {
     background-color: 0084fe;
     margin-right:20px;
+
 }
 .btn-secondary {
 
@@ -90,15 +116,33 @@ body {
     padding-left:30px;
 }
 
+@media (max-width: 992px) {
+    .backgroundImage {
+        height:200%;
+    }
+    .heroCardWrapper {
+        margin-top:100px;
+        flex-direction:column-reverse;
+    }
+    .heroCardImage {
+        top:80px;
+        right:0;
+    }
+ }
+
 
 @font-face {
     font-family: 'Inter';
     src: url("../assets/Inter-Regular.ttf") format('truetype');
-    /* font-weight:400; */
+    font-weight:normal;
 }
-
+@font-face {
+    font-family: 'Inter';
+    src: url("../assets/Inter-Medium.ttf") format('truetype');
+    font-weight:medium;
+}
 @font-face {
     font-family: 'Inter';
     src: url("../assets/Inter-Bold.ttf") format('truetype');
-    /* font-weight:800; */
+    font-weight:bold;
 }
