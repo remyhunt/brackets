@@ -22,7 +22,7 @@ I've temporarily made my Github repo public for this project for your review
 - drop in Page Metadata stored in Contentful in a header component / Helmet
 - add a Hamburger menu to the mobile view / nav
 - auto generate pages with my Page model in gatsby-node (Althought this was outside of the spec, I designed it this way to be extensible w/ reusable objects in the model)
-
+- fix background filter background-size / position issue
 
 ## Content Modelling
 
