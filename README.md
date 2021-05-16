@@ -23,6 +23,8 @@ I've temporarily made my Github repo public for this project for your review
 - add a Hamburger menu to the mobile view / nav
 - auto generate pages with my Page model in gatsby-node (Althought this was outside of the spec, I designed it this way to be extensible w/ reusable objects in the model)
 - fix background filter background-size / position issue
+- correct ordering of navigation links by updating the query.
+- use `gatsby-img` component to query appropriately sized images for performance.
 
 ## Content Modelling
 
